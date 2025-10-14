@@ -10,6 +10,7 @@ interface GridMotionProps {
 }
 
 const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }) => {
+  const backgroundColor = 'var(--background)';
   const gridRef = useRef<HTMLDivElement>(null);
   const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
   const animationRef = useRef<gsap.core.Timeline | null>(null);
@@ -58,7 +59,7 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
       <section
         className="intro"
         style={{
-          background: `radial-gradient(circle, ${gradientColor} 0%, transparent 100%)`
+          background: `radial-gradient(circle, ${gradientColor} 0%, ${backgroundColor} 100%)`
         }}
       >
         <div className="gridMotion-container">

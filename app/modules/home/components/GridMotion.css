@@ -37,7 +37,7 @@
   grid-template-columns: 100%;
   transform: rotate(-15deg);
   transform-origin: center center;
-  z-index: 2;
+  z-index: 1;
 }
 
 .row {
